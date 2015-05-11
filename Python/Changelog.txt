@@ -1,0 +1,33 @@
+
+Version 1
+-Global Variables adjusted at top to alter RISK LEVEL filter and 
+ Saccade Filtering 
+
+
+Version .998
+-New Area Under the Curve Calculation uses rectangle approximations instead of straight line sums. the width of each rectangle is measured by an approximation of (saccade length)/(#saccade values). 
+-Confidence ratings added to have a check for a likelihood of error in STAS calculation
+- RISK Level added: Risk level settings must be adjusted for each data set and are only used as a guide
+-Weighting included to bias the saccade direction calculation towards the first half of
+saccade direction
+- 
+
+
+Version .997
+-fixed carry-over problem when a trial ends with 1's and new subjects begins with 1's EdgeCase#1
+-If saccade goes backwards the saccadeLength will be set to negative and eventually discarded
+
+
+Version .996
+- Fixed end point assignment for L2R and R2l 
+- pixel to degrees conversion (self.screenAngle) changed from 42 to 38,
+in all versions
+
+
+Version 0.995 
+
+- Fixed the calculation of end point assignment
+  for T2B and B2t
+  previous assignment was changing the actual endpoint
+  this version will now properly discard extraneous data
+  points in saccade but retain the proper end point
